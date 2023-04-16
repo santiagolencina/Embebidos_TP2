@@ -1,4 +1,4 @@
- # Compilador a utilizar
+# Compilador a utilizar
 CC=gcc
 
 # Opciones de compilación
@@ -6,6 +6,7 @@ CFLAGS=-c -Wall
 
 # Directorios de origen y destino
 SRC_DIR=src
+INC_DIR=inc
 OBJ_DIR=build/obj
 BIN_DIR=build/bin
 
@@ -25,7 +26,7 @@ $(EXECUTABLE): $(OBJECTS)
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	mkdir -p $(OBJ_DIR)
 	mkdir -p $(BIN_DIR)
-	$(CC) $(CFLAGS) $< -o $@
+	$(CC) $(CFLAGS) $< -o $@ -I $(INC_DIR)
 
 # Limpiar archivos generados
 clean:
