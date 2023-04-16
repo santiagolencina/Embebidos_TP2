@@ -2,7 +2,10 @@
 #include "alumno.h"
 
 int main(void) {
-
+    /**
+     * @brief Creo un alumno a serializar
+     *
+     */
     static const struct alumno_s yo = {
         .apellido = "Lencina Martínez",
         .nombre = "Luis Santiago",
@@ -11,7 +14,7 @@ int main(void) {
     char cadena[128];
 
     /**
-     * @brief Pruebo comentar archivo .c
+     * @brief  Envio alumno a Serializar
      *
      */
     if (serializar(&yo, cadena, sizeof(cadena)) >= 0) {

@@ -11,9 +11,9 @@ extern "c" {
 
 //! Estructura para almacenar datos de un alumno
 typedef struct alumno_s {
-    char apellido[SIZE]; //!< almacena el apellido
-    char nombre[SIZE];   //!< almacena el nombre
-    uint32_t documento;  //!< almacena numero de documento
+    char apellido[SIZE]; ///!< almacena el apellido
+    char nombre[SIZE];   ///!< almacena el nombre
+    uint32_t documento;  ///!< almacena numero de documento
 } * alumno_t;
 
 /**

@@ -2,6 +2,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * @brief
+ *
+ * @param campo el campo a describir
+ * @param valor la descripción
+ * @param cadena lugar donde se escribe
+ * @param espacio longitud de cadena
+ * @return int tipo de valor retornado
+ */
 static int serializarCadena(const char * campo, const char * valor, char * cadena, int espacio) {
     return snprintf(cadena, espacio, "\"%s\":\"%s\",", campo, valor);
 }
